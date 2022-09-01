@@ -5,7 +5,7 @@
     if ( N*M*P > End+1-Start)
       return ( false, Array); 
     Random rnd = new Random();
-    List<int> UsedNumbers=new List<int>{0};
+    List<int> UsedNumbers=new List<int>{0}; // уже сгенерированные числа
     for (int i = 0; i < N; i++)
         for (int j = 0; j < M; j++)
            for (int k = 0;  k < P;  k++)
@@ -38,7 +38,7 @@ System.Console.Write(" M = ");
 int M = Convert.ToInt32(Console.ReadLine());
 System.Console.Write(" P = ");
 int P = Convert.ToInt32(Console.ReadLine());
-int start = 10;
+int start = 10; // двузначные числа
 int end = 100;
 var (Flag, Arr) = FillArray(N, M, P, start, end);
 if (Flag)
